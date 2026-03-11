@@ -4,6 +4,14 @@
 
 Circuit description · MCP6002 · 3.3V single supply · Teensy 4.0
 
+This is how the standard alesis drum trigger is wired
+
+![150k pull down 120k series](standard_alesis_wiring.jpg)
+
+I have wired it backwards as the first peak was a negative peak and stronger than ther rest and i wanted that sensitivity - so i have wired it like this
+
+![backwards wiring image](backwards_alesis_wiring.jpg)
+
 ## Input
 
 **C (piezo sensor)** is attached to the drum head and generates a voltage spike when struck. **R1 (1MΩ)** pulls the input down to 0V when the drum is idle, preventing the signal line from floating and picking up noise.
@@ -24,7 +32,7 @@ U1B is configured as a non-inverting amplifier. The feedback network consists of
 
 ## Stage 3 — Peak Detector
 
-**D3 (1N4148)** rectifies the amplified signal, allowing only positive voltages through. **C2 (100nF)** charges to the peak voltage of each strike and holds it. **R5 (100kΩ)** slowly drains C2 to ground, giving a hold time of approximately 10ms (τ = R × C) — comfortably longer than the Teensy's 5ms scan window, ensuring the ADC reads the peak cleanly before it decays.
+**D3 (1N4148)** rectifies the amplified signal, allowing only positive voltages through. **C2 (100nF)** charges to the peak voltage of each strike and holds it. **R5 (265kΩ)** slowly drains C2 to ground, giving a hold time of approximately 10ms (τ = R × C) — comfortably longer than the Teensy's 5ms scan window, ensuring the ADC reads the peak cleanly before it decays.
 
 ## Power Supply (U1C)
 
