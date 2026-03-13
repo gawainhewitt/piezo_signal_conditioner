@@ -2190,6 +2190,50 @@
 			)
 		)
 	)
+	(global_label "positive output"
+		(shape input)
+		(at 77.47 133.35 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9f3852e8-5f03-49cd-8f17-6d7cdbd660c1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 94.7878 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "negative output"
+		(shape input)
+		(at 77.47 148.59 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a59d706a-2575-40c6-9f52-549b4ecd550f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 95.3925 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(symbol
 		(lib_id "Device:R")
 		(at 177.8 72.39 0)
@@ -2209,7 +2253,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "265k"
+		(property "Value" "270k"
 			(at 180.34 73.6599 0)
 			(effects
 				(font
@@ -2329,15 +2373,15 @@
 	(symbol
 		(lib_id "Device:C_Polarized")
 		(at 41.91 140.97 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "11db8315-560d-4e7f-b012-186a08e7a2ad")
 		(property "Reference" "C3"
-			(at 45.72 138.8109 0)
+			(at 45.72 143.1291 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2346,7 +2390,7 @@
 			)
 		)
 		(property "Value" "piezo"
-			(at 45.72 141.3509 0)
+			(at 45.72 140.5891 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2355,7 +2399,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 42.8752 144.78 0)
+			(at 42.8752 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2641,7 +2685,7 @@
 				)
 			)
 		)
-		(property "Value" "120k"
+		(property "Value" "100k"
 			(at 54.61 129.54 90)
 			(effects
 				(font
